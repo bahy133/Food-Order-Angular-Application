@@ -1,3 +1,12 @@
 {
+  "HOME":"Home",
+  "STORES":"Stores",
+  "ACCOUNT":"Account",
+  "LOGIN":"Login",
+  "REGISTER":"Register",
+  "LOGOUT":"Logout",
+  "SEARCH":"Search",
+  "SUBMIT":"Submit",
+  "RATING":"Rating"
 
 }
