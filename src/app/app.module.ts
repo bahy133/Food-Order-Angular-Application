@@ -13,9 +13,10 @@ import { TranslateLoader } from '@ngx-translate/core';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { HomeComponent } from './Components/home/home.component';
+import { LayoutComponent } from './layout/layout.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, FooterComponent, HomeComponent],
+  declarations: [AppComponent, NavbarComponent, FooterComponent, HomeComponent, LayoutComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
