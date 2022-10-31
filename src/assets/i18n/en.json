@@ -1,12 +1,23 @@
 {
   "HOME":"Home",
-  "STORES":"Stores",
+  "STORES":"Store",
   "ACCOUNT":"Account",
   "LOGIN":"Login",
   "REGISTER":"Register",
   "LOGOUT":"Logout",
   "SEARCH":"Search",
   "SUBMIT":"Submit",
-  "RATING":"Rating"
+  "RATING":"Rating",
+  "NAME":"Full Name",
+  "EMAIL":"Email",
+  "PASSWORD":"Password",
+  "PHONE":"Phone",
+  "ADDERSS":"Addres",
+  "GENDER":"Gender",
+  "CARDNUMBER":"Card Number",
+  "EXPIARY":"Expiary",
+  "CVV":"Cvv",
+  "MALE":"Male",
+  "FEMALE":"Female"
 
 }
