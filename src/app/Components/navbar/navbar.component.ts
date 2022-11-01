@@ -1,3 +1,4 @@
+import { trigger_Example } from './../../Animations/Fade.Animations';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
@@ -6,6 +7,7 @@ import { TranslateService } from '@ngx-translate/core';
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
+  animations: [trigger_Example],
 })
 export class NavbarComponent implements OnInit {
   currentlang!: string;
