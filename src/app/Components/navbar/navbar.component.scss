@@ -13,7 +13,20 @@
       color: #C70039;
       cursor: pointer;
     }
-
+    .cartno{
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      background-color: #C70039;
+      color: white;
+      position: absolute;
+      top: 4px;
+      left: 800px;
+      font-size: small;
+      z-index: 5;
+      border: 1px solid black;
+      text-align: center;
+    }
     .langblock{
       background-color: #FFC300 ;
       color: black;
@@ -39,7 +52,9 @@
             box-sizing: border-box;
             cursor: pointer;
           }
+
         }
+
 
     }
 

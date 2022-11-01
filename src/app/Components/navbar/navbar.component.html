@@ -1,10 +1,14 @@
 <div>
   <ul class="navbar">
-    <li>{{ "HOME" | translate }}</li>
-    <li>{{ "STORES" | translate }}</li>
-    <li>{{ "ACCOUNT" | translate }}</li>
-    <li>{{ "LOGIN" | translate }}</li>
-    <li>{{ "CART" | translate }}</li>
+    <li routerLink="/Home">{{ "HOME" | translate }}</li>
+    <li routerLink="">{{ "STORES" | translate }}</li>
+    <li routerLink="">{{ "ACCOUNT" | translate }}</li>
+    <li routerLink="">{{ "LOGIN" | translate }}</li>
+    <li routerLink="" class="cart">
+      <i class="fa-solid fa-cart-plus"></i>
+      <div class="cartno">0</div>
+    </li>
+
     <li class="lang">
       <i class="fa-solid fa-globe"></i
       ><i style="margin-left: 5px" class="fa-solid fa-chevron-down"></i>
