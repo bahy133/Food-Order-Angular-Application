@@ -1,12 +1,12 @@
 <div>
   <ul class="navbar">
     <li routerLink="/Home">{{ "HOME" | translate }}</li>
-    <li routerLink="">{{ "STORES" | translate }}</li>
-    <li routerLink="">{{ "ACCOUNT" | translate }}</li>
-    <li routerLink="">{{ "LOGIN" | translate }}</li>
-    <li routerLink="" class="cart">
+    <li routerLink="/Food/Stores">{{ "STORES" | translate }}</li>
+    <li (click)="NavigateToAccount()">{{ "ACCOUNT" | translate }}</li>
+    <li routerLink="/Authorization/Login">{{ "LOGIN" | translate }}</li>
+    <li routerLink="/User/Cart" class="cart">
       <i class="fa-solid fa-cart-plus"></i>
-      <div class="cartno">0</div>
+      <div class="cartno" appCustomCart [lang]="currentlang">0</div>
     </li>
 
     <li class="lang">

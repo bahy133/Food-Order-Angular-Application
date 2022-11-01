@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -8,7 +9,8 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class NavbarComponent implements OnInit {
   currentlang!: string;
-  constructor(public translate: TranslateService) {}
+  UEmail: string = 'g';
+  constructor(public translate: TranslateService, private router: Router) {}
 
   ngOnInit(): void {}
   transfn(lang: string) {
@@ -21,5 +23,8 @@ export class NavbarComponent implements OnInit {
       return 'rtl';
     }
     return 'ltr';
+  }
+  NavigateToAccount() {
+    this.router.navigate(['User/Account/', this.UEmail]);
   }
 }
