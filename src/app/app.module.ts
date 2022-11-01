@@ -15,6 +15,7 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { HomeComponent } from './Components/home/home.component';
 import { LayoutComponent } from './Components/layout/layout.component';
 import { ErrorComponent } from './Components/error/error.component';
+import { CustomlangDirective } from './Directives/customlang.directive';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ErrorComponent } from './Components/error/error.component';
     HomeComponent,
     LayoutComponent,
     ErrorComponent,
+    CustomlangDirective,
   ],
   imports: [
     BrowserModule,
