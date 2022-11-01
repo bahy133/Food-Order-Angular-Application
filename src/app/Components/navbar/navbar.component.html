@@ -5,15 +5,13 @@
     <li>{{ "ACCOUNT" | translate }}</li>
     <li>{{ "LOGIN" | translate }}</li>
     <li>{{ "CART" | translate }}</li>
-    <li class="lang" appCustomlang>
+    <li class="lang">
       <i class="fa-solid fa-globe"></i
       ><i style="margin-left: 5px" class="fa-solid fa-chevron-down"></i>
-    </li>
-    <div>
-      <ul class="langblock">
-        <li (click)="translate.use('en')">EN</li>
-        <li (click)="translate.use('ar')">AR</li>
+      <ul class="langblock" appCustomlang [lang]="currentlang">
+        <li (click)="transfn('en')">EN</li>
+        <li (click)="transfn('ar')">AR</li>
       </ul>
-    </div>
+    </li>
   </ul>
 </div>

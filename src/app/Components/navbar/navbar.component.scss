@@ -13,34 +13,46 @@
       color: #C70039;
       cursor: pointer;
     }
-  }
-  .langblock{
-    background-color: #FFC300 ;
-    color: black;
-    position: fixed;
-    width:47px;
-    top: 46px;
-    left:834px;
-    border: 3px black solid;
-    display: none;
 
-      list-style-type: none;
+    .langblock{
+      background-color: #FFC300 ;
+      color: black;
+      position: fixed;
+      width:47px;
+      top: 30px;
+      left:834px;
+      border: 3px black solid;
+      display: none;
 
-      //margin: 0px 0px 0px -27px;
-      box-sizing: border-box;
-      li{
-        left:-23px;
-        position: relative;
-        margin-left: 0;
-        align-items: center;
-        &:hover{
-          //background-color: black;
-          color: #C70039;
-          box-sizing: border-box;
-          cursor: pointer;
+        list-style-type: none;
+
+        //margin: 0px 0px 0px -27px;
+        box-sizing: border-box;
+        li{
+          left:-23px;
+          position: relative;
+          margin-left: 0;
+          align-items: center;
+          &:hover{
+            //background-color: black;
+            color: #C70039;
+            box-sizing: border-box;
+            cursor: pointer;
+          }
         }
+
+    }
+
+  }
+
+  .lang{
+    &:hover{
+      .langblock{
+        display: block ;
+        // left: -50px;
       }
 
+    }
   }
   li{
     margin: 10px;
