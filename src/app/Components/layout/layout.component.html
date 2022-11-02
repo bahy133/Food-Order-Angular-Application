@@ -1,7 +1,7 @@
 <div>
   <app-navbar id="navbar"></app-navbar>
   <app-navbar id="sidenav"></app-navbar>
-  <div id="main">
+  <div id="main" class="container-fluid">
     <main [@routing]="outletRef.isActivated ? outletRef.activatedRoute : ''">
       <router-outlet #outletRef="outlet"></router-outlet>
     </main>

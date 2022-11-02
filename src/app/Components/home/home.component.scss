@@ -62,5 +62,31 @@
   .parent{
 
     flex-direction: column;
+    .content{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .contentChild{
+        width: 250px;
+        height: 250px;
+        border: 1px black solid;
+        margin-bottom: 10px;
+        font-size: larger;
+
+      }
+    }
+    .searchbar{
+      // position: absolute;
+      // top:-100px;
+      margin-bottom: 50px;
+      margin-right: 50px;
+
+
+      button{
+        margin-left: -15px;
+
+      }
+    }
   }
 }
