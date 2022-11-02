@@ -12,6 +12,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class NavbarComponent implements OnInit {
   currentlang!: string;
   UEmail: string = 'g';
+
   constructor(public translate: TranslateService, private router: Router) {}
 
   ngOnInit(): void {}
