@@ -4,4 +4,18 @@
     <i class="fa-solid fa-magnifying-glass serachicon"></i>
     <button>{{ "SEARCH" | translate }}</button>
   </div>
+  <div class="content">
+    <div class="contentChild" *ngFor="let food of foodList">
+      <div>{{ food.id }}</div>
+      <div>{{ food.price | currency }}</div>
+      <div style="color: orange; font-size: x-large">
+        <ngb-rating
+          [max]="5"
+          [(rate)]="food.rating / food.numUser"
+          [readonly]="true"
+        >
+        </ngb-rating>
+      </div>
+    </div>
+  </div>
 </div>

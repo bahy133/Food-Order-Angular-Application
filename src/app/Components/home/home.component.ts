@@ -1,3 +1,5 @@
+import { Food } from './../../Models/food';
+import { FoodService } from './../../Services/food.service';
 import { TranslateService } from '@ngx-translate/core';
 import { Component, OnInit } from '@angular/core';
 
@@ -7,14 +9,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor(public translate: TranslateService) {}
+  foodList!: Food[];
+  constructor(public translate: TranslateService, private food: FoodService) {
+    this.food.getallFood().subscribe((data) => {
+      this.foodList = data;
+    });
+  }
 
   ngOnInit(): void {}
-  checkdir() {
-    if (localStorage.getItem('language') == 'ar') {
-      return 'rtl';
-    } else {
-      return 'ltr';
-    }
-  }
 }

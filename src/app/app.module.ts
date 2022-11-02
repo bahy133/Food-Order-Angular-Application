@@ -17,6 +17,7 @@ import { LayoutComponent } from './Components/layout/layout.component';
 import { ErrorComponent } from './Components/error/error.component';
 import { CustomlangDirective } from './Directives/customlang.directive';
 import { CustomCartDirective } from './Directives/custom-cart.directive';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { CustomCartDirective } from './Directives/custom-cart.directive';
       },
     }),
     BrowserAnimationsModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

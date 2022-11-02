@@ -4,18 +4,31 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  position: relative;
+  //position: relative;
   width: 100%;
   height: 29%;
   .serachicon{
-    position: absolute;
-    left: 5px;
-    top: 6px;
+    position: relative;
+    left: -240px;
+    top: 2px;
 
   }
+  .content{
+    display: flex;
+    .contentChild{
+      width: 250px;
+      height: 250px;
+      border: 1px black solid;
+      margin-left: 10px;
+      font-size: larger;
+
+    }
+  }
+
   .searchbar{
-    position: absolute;
-    top:-200px;
+    // position: absolute;
+    // top:-100px;
+    margin-bottom: 50px;
     width: 350px;
     font-family: 'Poor Story', 'cursive';
     font-size: large;
@@ -25,14 +38,14 @@
       height: 30px;
       border-radius: 20px;
       outline: none;
-      padding-left:22px ;
+      padding-left:29px ;
       border: #FFC300 2px solid;
       &:hover{
         border-color: #C70039;
       }
     }
     button{
-      margin-left: 3px;
+      margin-left: 0;
       border-radius: 10px;
       width: 75px;
       background-color: #FFC300;
