@@ -17,6 +17,7 @@ import { LayoutComponent } from './Components/layout/layout.component';
 import { ErrorComponent } from './Components/error/error.component';
 import { CustomlangDirective } from './Directives/customlang.directive';
 import { CustomCartDirective } from './Directives/custom-cart.directive';
+import { SidebarComponent } from './Components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { CustomCartDirective } from './Directives/custom-cart.directive';
     ErrorComponent,
     CustomlangDirective,
     CustomCartDirective,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,

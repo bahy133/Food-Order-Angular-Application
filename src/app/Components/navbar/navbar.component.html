@@ -1,12 +1,13 @@
 <div>
-  <ul class="navbar">
+  <ul class="navbar container-fluid">
     <li routerLink="/Home">{{ "HOME" | translate }}</li>
     <li routerLink="/Food/Stores">{{ "STORES" | translate }}</li>
     <li (click)="NavigateToAccount()">{{ "ACCOUNT" | translate }}</li>
     <li routerLink="/Authorization/Login">{{ "LOGIN" | translate }}</li>
     <li routerLink="/User/Cart" class="cart">
-      <i class="fa-solid fa-cart-plus"></i>
-      <div class="cartno" appCustomCart [lang]="currentlang">0</div>
+      <button type="button">
+        <i class="fa-solid fa-cart-plus"></i><span class="cartno">0</span>
+      </button>
     </li>
 
     <li class="lang">

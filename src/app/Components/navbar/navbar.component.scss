@@ -13,20 +13,32 @@
       color: #C70039;
       cursor: pointer;
     }
-    .cartno{
-      border-radius: 40%;
-      width: 20px;
-      height: 20px;
-      background-color: #C70039;
-      color: white;
-      position: absolute;
-      top: 4px;
-      left: 800px;
-      font-size: x-small;
-      z-index: 5;
-      border: 1px solid black;
-      text-align: center;
+    button{
+      border: none;
+      outline: none;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background-color: #FFC300;
+      .cartno{
+        border-radius: 40%;
+        width: 20px;
+        height: 20px;
+        background-color: #C70039;
+        color: white;
+        position: absolute;
+        top: -9px;
+        left: 25px;
+
+        font-size: x-small;
+        // z-index: 5;
+        border: 1px solid black;
+        text-align: center;
+      }
     }
+
     .langblock{
       background-color: #FFC300 ;
       color: black;
@@ -75,7 +87,4 @@
   }
 
 }
-@media (max-width:700px) {
 
-
-}
