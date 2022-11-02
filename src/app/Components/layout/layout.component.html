@@ -1,8 +1,10 @@
 <div>
   <app-navbar id="navbar"></app-navbar>
   <app-navbar id="sidenav"></app-navbar>
-  <div id="main" class="box container-fluid">
-    <router-outlet></router-outlet>
+  <div id="main">
+    <main [@routing]="outletRef.isActivated ? outletRef.activatedRoute : ''">
+      <router-outlet #outletRef="outlet"></router-outlet>
+    </main>
   </div>
   <app-footer id="footer"></app-footer>
 </div>

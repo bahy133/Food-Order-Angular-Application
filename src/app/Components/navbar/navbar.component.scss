@@ -75,7 +75,7 @@
         box-sizing: border-box;
         li{
           left:-23px;
-          position: relative;
+          position:relative ;
           margin-left: 0;
           align-items: center;
           &:hover{
@@ -118,7 +118,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    z-index: 20;
     display: none;
     &:hover{
       display: flex;

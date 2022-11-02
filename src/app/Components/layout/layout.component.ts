@@ -1,3 +1,4 @@
+import { routingAn } from './../../Animations/Routing.Animation';
 import { TranslateService } from '@ngx-translate/core';
 import { Component, OnInit } from '@angular/core';
 
@@ -5,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-layout',
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss'],
+  animations: [routingAn],
 })
 export class LayoutComponent implements OnInit {
   currentLang!: string;

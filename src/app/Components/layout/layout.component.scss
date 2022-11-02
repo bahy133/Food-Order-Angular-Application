@@ -1,4 +1,6 @@
-
+body{
+  overflow-x: hidden;
+}
 div{
   display: grid;
   width:100%;
@@ -31,6 +33,11 @@ div{
   }
   #main{
     grid-area: ma;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px red solid;
+    width: 100%;
   }
   #footer{
     grid-area: ft;
@@ -77,6 +84,7 @@ div{
     }
     #main{
       grid-area: ma;
+
     }
     #footer{
       grid-area: ft;
