@@ -16,4 +16,8 @@ export class LayoutComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+  changeLang() {
+    if (localStorage.getItem('language') == 'ar') return 'rtl';
+    return 'ltr';
+  }
 }
