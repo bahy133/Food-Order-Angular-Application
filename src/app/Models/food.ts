@@ -5,4 +5,6 @@ export class Food {
   price!: number;
   store!: string;
   imgURL!: string;
+  description!: string;
+  comments!: string[];
 }

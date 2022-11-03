@@ -15,12 +15,55 @@
   }
   .content{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
     .contentChild{
-      width: 250px;
-      height: 250px;
-      border: 1px black solid;
+      width: 350px;
+      height: 470px;
+      //border: 1px black solid;
       margin-left: 10px;
+      margin-top: 20px;
       font-size: larger;
+      cursor: pointer;
+      border-radius: 25px;
+      font-family: 'Merriweather', serif;
+      .contentCard{
+        margin-top: 20px;
+        background-color: #D5D8DC;
+        height: 220px;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        .foodname{
+          text-align: center;
+          font-family: 'Merriweather', serif;
+          font-size: large;
+          margin-top: 5px;
+        }
+        .fooddesc{
+          margin-top: 10px;
+          margin-left: 10px;
+        }
+        .foodprice{
+          color: green;
+          margin-left: -183px;
+          margin-top: 10px;
+        }
+      }
+      img{
+        border-radius: 25px;
+      }
+      &:hover{
+        //transform: translateY('30px');
+        //margin-top: -10px;
+        z-index: 5;
+        box-shadow: 5px 5px 10px 10px #FFC300 ;
+      }
 
     }
   }
@@ -69,10 +112,14 @@
       align-items: center;
       .contentChild{
         width: 250px;
-        height: 250px;
-        border: 1px black solid;
-        margin-bottom: 10px;
+        height: 470px;
+       // border: 1px black solid;
+        margin-bottom: 50px;
         font-size: larger;
+
+          .foodprice{
+            margin-left: 50px;
+          }
 
       }
     }

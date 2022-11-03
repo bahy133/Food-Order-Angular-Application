@@ -5,16 +5,29 @@
     <button>{{ "SEARCH" | translate }}</button>
   </div>
   <div class="content">
-    <div class="contentChild" *ngFor="let food of foodList">
-      <div>{{ food.id }}</div>
-      <div>{{ food.price | currency }}</div>
-      <div style="color: orange; font-size: x-large">
-        <ngb-rating
-          [max]="5"
-          [(rate)]="food.rating / food.numUser"
-          [readonly]="true"
-        >
-        </ngb-rating>
+    <div
+      class="contentChild"
+      *ngFor="let food of foodList"
+      routerLink="/Food/FoodDetails"
+    >
+      <div><img [src]="food.imgURL" width="100%" height="230px" /></div>
+      <div class="contentCard">
+        <div class="foodname">{{ food.id.toUpperCase() | translate }}</div>
+        <div class="fooddesc">{{ food.description.toUpperCase() }}</div>
+
+        <div class="foodprice">
+          {{ food.price | currency: "EGP ":"code":"2.0" }}
+        </div>
+        <div style="font-size: small">
+          <ngb-rating
+            style="color: orange; font-size: x-large"
+            [max]="5"
+            [(rate)]="food.rating / food.numUser"
+            [readonly]="true"
+          >
+          </ngb-rating>
+          ({{ food.rating / food.numUser }})
+        </div>
       </div>
     </div>
   </div>
