@@ -1,7 +1,12 @@
 <div class="parent">
   <div class="searchbar">
-    <input type="text" />
-    <i class="fa-solid fa-magnifying-glass serachicon"></i>
+    <input type="text" appCustomdir [lang]="lang.changedir()" />
+    <i
+      class="fa-solid fa-magnifying-glass serachicon"
+      appCustomlang
+      type="searchicon"
+      [lang]="lang.changedir()"
+    ></i>
     <button>{{ "SEARCH" | translate }}</button>
   </div>
   <div class="content">

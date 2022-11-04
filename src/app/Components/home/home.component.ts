@@ -1,3 +1,4 @@
+import { LanguagedirService } from './../../Services/languagedir.service';
 import { Food } from './../../Models/food';
 import { FoodService } from './../../Services/food.service';
 import { TranslateService } from '@ngx-translate/core';
@@ -10,7 +11,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   foodList!: Food[];
-  constructor(public translate: TranslateService, private food: FoodService) {
+
+  constructor(
+    public translate: TranslateService,
+    private food: FoodService,
+    public lang: LanguagedirService
+  ) {
     this.food.getallFood().subscribe((data) => {
       this.foodList = data;
     });

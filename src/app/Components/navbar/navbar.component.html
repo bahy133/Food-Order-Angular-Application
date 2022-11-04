@@ -16,9 +16,23 @@
     <li class="lang">
       <i class="fa-solid fa-globe"></i
       ><i style="margin-left: 5px" class="fa-solid fa-chevron-down"></i>
-      <ul class="langblock" @Fade>
-        <li (click)="transfn('en')">EN</li>
-        <li (click)="transfn('ar')">AR</li>
+      <ul class="langblock">
+        <li
+          (click)="transfn('en')"
+          appCustomlang
+          [lang]="changedir()"
+          type="langblock"
+        >
+          EN
+        </li>
+        <li
+          (click)="transfn('ar')"
+          appCustomlang
+          [lang]="changedir()"
+          type="langblock"
+        >
+          AR
+        </li>
       </ul>
     </li>
   </ul>

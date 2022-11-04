@@ -18,6 +18,7 @@ import { ErrorComponent } from './Components/error/error.component';
 import { CustomlangDirective } from './Directives/customlang.directive';
 import { CustomCartDirective } from './Directives/custom-cart.directive';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CustomdirDirective } from './Directives/customdir.directive';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ErrorComponent,
     CustomlangDirective,
     CustomCartDirective,
+    CustomdirDirective,
   ],
   imports: [
     BrowserModule,
