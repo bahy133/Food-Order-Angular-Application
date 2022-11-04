@@ -28,14 +28,14 @@ export class FoodService {
       this.httpOptions
     );
   }
-  updateUser(Fname: string, food: Food) {
+  updateFood(Fname: string, food: Food) {
     return this.http.put(
       `${environment.ApiLink}/Food/${Fname}`,
       food,
       this.httpOptions
     );
   }
-  deleteUser(Fname: string) {
+  deleteFood(Fname: string) {
     return this.http.delete(`${environment.ApiLink}/Food/${Fname}`);
   }
 }

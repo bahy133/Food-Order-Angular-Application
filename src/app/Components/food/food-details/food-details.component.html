@@ -6,10 +6,14 @@
     <div class="name">{{ food.id.toUpperCase() | translate }}</div>
     <div class="price">{{ "EGP" | translate }} {{ food.price }}</div>
     <div class="rating">
-      <ngb-rating [max]="5" [(ngModel)]="userrate"></ngb-rating>
+      <ngb-rating
+        [max]="5"
+        [(ngModel)]="userrate"
+        (click)="addrate()"
+      ></ngb-rating>
     </div>
     <div>
-      <button type="button" class="btn btn-primary">
+      <button type="button" class="btn btn-primary" (click)="addToCart()">
         {{ "ADDCART" | translate }}
       </button>
     </div>
@@ -21,12 +25,16 @@
         {{ comm }}
       </mat-list-item>
     </mat-list>
-
-    <label>{{ "COMMENT" | translate }}</label>
-    <br />
-    <input type="text" #Ucomment />
-    <button type="button" class="btn btn-primary">
-      {{ "ADDCOMMENT" | translate }}
-    </button>
+    <div class="inputbox">
+      <input type="text" #Ucomment />
+      <label>{{ "COMMENT" | translate }}</label>
+      <button
+        type="button"
+        class="btn btn-primary"
+        (click)="addComment(Ucomment.value)"
+      >
+        {{ "ADDCOMMENT" | translate }}
+      </button>
+    </div>
   </div>
 </div>
