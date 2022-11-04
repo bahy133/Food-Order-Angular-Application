@@ -19,7 +19,7 @@ export class FoodService {
     return this.http.get<Food[]>(`${environment.ApiLink}/Food`);
   }
   getFood(Fname: string): Observable<Food> {
-    return this.http.get<Food>(`${environment.ApiLink}/User?email=${Fname}`);
+    return this.http.get<Food>(`${environment.ApiLink}/Food/${Fname}`);
   }
   addFood(food: Food) {
     return this.http.post(

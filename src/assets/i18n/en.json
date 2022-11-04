@@ -21,6 +21,15 @@
   "MALE":"Male",
   "FEMALE":"Female",
   "BIG TASTY":"BIG TASTY",
-  "EGP":"EGP"
+  "EGP":"EGP",
+  "BIG MAC":"BIG MAC",
+  "ANIMAL STYLE":"ANIMAL STYLE",
+  "GRUNGY":"GRUNGY",
+  "COMMENTS":"Comments",
+  "COMMENT":"Comment",
+  "ADDCOMMENT":"Comment",
+  "ADDCART":"Add To Cart"
+
+
 
 }

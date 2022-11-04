@@ -13,16 +13,14 @@
     <div
       class="contentChild"
       *ngFor="let food of foodList"
-      routerLink="/Food/FoodDetails"
+      (click)="redirectToDetails(food.id)"
     >
       <div><img [src]="food.imgURL" width="100%" height="230px" /></div>
       <div class="contentCard">
         <div class="foodname">{{ food.id.toUpperCase() | translate }}</div>
         <div class="fooddesc">{{ food.description.toUpperCase() }}</div>
 
-        <div class="foodprice">
-          {{ food.price | currency: "EGP ":"code":"2.0" }}
-        </div>
+        <div class="foodprice">{{ "EGP" | translate }} {{ food.price }}</div>
         <div style="font-size: small">
           <ngb-rating
             style="color: orange; font-size: x-large"

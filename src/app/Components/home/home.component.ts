@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { LanguagedirService } from './../../Services/languagedir.service';
 import { Food } from './../../Models/food';
 import { FoodService } from './../../Services/food.service';
@@ -15,12 +16,15 @@ export class HomeComponent implements OnInit {
   constructor(
     public translate: TranslateService,
     private food: FoodService,
-    public lang: LanguagedirService
+    public lang: LanguagedirService,
+    private router: Router
   ) {
     this.food.getallFood().subscribe((data) => {
       this.foodList = data;
     });
   }
-
+  redirectToDetails(id: string) {
+    this.router.navigate(['/Food/FoodDetails/', id]);
+  }
   ngOnInit(): void {}
 }

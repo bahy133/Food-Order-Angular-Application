@@ -21,6 +21,13 @@
   "MALE":"ذكر",
   "FEMALE":"انثى",
   "BIG TASTY":"بيج تايستي",
-  "EGP":"ج.م"
+  "EGP":"ج.م",
+  "BIG MAC":"بيج ماك",
+  "ANIMAL STYLE":"انيمال استايل",
+  "GRUNGY":"جرانجي",
+  "COMMENTS":"التعليقات",
+  "COMMENT":"تعليق",
+  "ADDCOMMENT":"اضافة تعليق",
+  "ADDCART":"اضف الي السلة"
 
 }

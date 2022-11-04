@@ -1,4 +1,3 @@
-import { UserModule } from './Components/user/user.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -19,6 +18,7 @@ import { CustomlangDirective } from './Directives/customlang.directive';
 import { CustomCartDirective } from './Directives/custom-cart.directive';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CustomdirDirective } from './Directives/customdir.directive';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -37,6 +37,7 @@ import { CustomdirDirective } from './Directives/customdir.directive';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    MatListModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
