@@ -1,18 +1,48 @@
 <div class="parent container-fluid">
   <div class="child">
-    <div class="emailinput">
-      <input type="email" required />
-      <label appLogindir [dir]="language.changedir()" name="email">{{
-        "EMAIL" | translate
-      }}</label>
+    <div class="text-danger" style="margin-bottom: 20px" *ngIf="error">
+      {{ "INVALIDLOGIN" | translate }}
     </div>
-    <div class="passwordinput">
-      <input type="password" required />
-      <label appLogindir [dir]="language.changedir()" name="pass">{{
-        "PASSWORD" | translate
-      }}</label>
-    </div>
-    <button type="button" class="btn">{{ "LOGIN" | translate }}</button>
-    <a href="">{{ "CREATEACCOUNT" | translate }}</a>
+    <form [formGroup]="userLogin" (ngSubmit)="Loginfn()">
+      <div class="emailinput">
+        <input
+          type="email"
+          formControlName="email"
+          id="uEmail"
+          name="userEmail"
+          required="required"
+        />
+        <label
+          for="uEmail"
+          appLogindir
+          [dir]="language.changedir()"
+          name="email"
+          >{{ "EMAIL" | translate }}</label
+        >
+      </div>
+      <div class="passwordinput">
+        <input
+          type="password"
+          formControlName="password"
+          id="uPass"
+          name="userPass"
+          required="required"
+        />
+        <label
+          for="uPass"
+          appLogindir
+          [dir]="language.changedir()"
+          name="pass"
+          >{{ "PASSWORD" | translate }}</label
+        >
+      </div>
+      <button type="submit" class="btn" [disabled]="userLogin.invalid">
+        {{ "LOGIN" | translate }}
+      </button>
+    </form>
+
+    <a routerLink="/Authorization/Registeration">{{
+      "CREATEACCOUNT" | translate
+    }}</a>
   </div>
 </div>

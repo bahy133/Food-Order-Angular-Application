@@ -29,6 +29,7 @@
   "COMMENT":"تعليق",
   "ADDCOMMENT":"اضافة تعليق",
   "ADDCART":"اضف الي السلة",
-  "CREATEACCOUNT":"تسجيل حساب"
+  "CREATEACCOUNT":"تسجيل حساب",
+  "INVALIDLOGIN":"خطأ في البريد الألكتروني او كلمة المرور"
 
 }

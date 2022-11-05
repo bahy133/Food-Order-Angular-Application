@@ -29,7 +29,8 @@
   "COMMENT":"Comment",
   "ADDCOMMENT":"Comment",
   "ADDCART":"Add To Cart",
-  "CREATEACCOUNT":"Create Account"
+  "CREATEACCOUNT":"Create Account",
+  "INVALIDLOGIN":"Invalid email or password"
 
 
 
