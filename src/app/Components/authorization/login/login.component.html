@@ -1,1 +1,18 @@
-<p>login works!</p>
+<div class="parent container-fluid">
+  <div class="child">
+    <div class="emailinput">
+      <input type="email" required />
+      <label appLogindir [dir]="language.changedir()" name="email">{{
+        "EMAIL" | translate
+      }}</label>
+    </div>
+    <div class="passwordinput">
+      <input type="password" required />
+      <label appLogindir [dir]="language.changedir()" name="pass">{{
+        "PASSWORD" | translate
+      }}</label>
+    </div>
+    <button type="button" class="btn">{{ "LOGIN" | translate }}</button>
+    <a href="">{{ "CREATEACCOUNT" | translate }}</a>
+  </div>
+</div>
