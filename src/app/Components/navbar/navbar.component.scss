@@ -15,17 +15,19 @@
 }
 .navbar{
   display: flex;
-  background-color: #FFC300 ;
+  background-color: #1C2833 ;
   list-style-type: none;
   align-items: center;
   justify-content: center;
-  border: 3px black solid;
+  border: 3px #1C2833 solid;
 
   li{
     font-family: 'Oswald', sans-serif;
     font-size: x-large;
+    transition-duration:1s ;
+    color: white;
     &:hover{
-      color: #C70039;
+      color: #FFC300;
       cursor: pointer;
     }
     button{
@@ -36,7 +38,12 @@
       justify-content: center;
       align-items: center;
       border-radius: 50%;
-      background-color: #FFC300;
+      background-color: #1C2833;
+      color: white;
+      transition-duration: 1s;
+      &:hover{
+        color: #FFC300;
+      }
       .cartno{
         border-radius: 40%;
         width: 20px;
@@ -60,7 +67,7 @@
   .lang{
     position: relative;
     .langblock{
-      background-color: #FFC300 ;
+      background-color: #1C2833 ;
       color: black;
       position: absolute;
       width:47px;
@@ -80,7 +87,7 @@
           align-items: center;
           &:hover{
             //background-color: black;
-            color: #C70039;
+            color: #FFC300;
             box-sizing: border-box;
             cursor: pointer;
           }
