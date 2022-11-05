@@ -9,13 +9,19 @@ import { TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader } from '@ngx-translate/core';
 import { LogindirDirective } from 'src/app/Directives/logindir.directive';
+import { LangdirRegDirective } from 'src/app/Directives/langdir-reg.directive';
 const routes: Routes = [
   { path: 'Login', component: LoginComponent },
   { path: 'Registeration', component: RegisterComponent },
 ];
 
 @NgModule({
-  declarations: [LoginComponent, RegisterComponent, LogindirDirective],
+  declarations: [
+    LoginComponent,
+    RegisterComponent,
+    LogindirDirective,
+    LangdirRegDirective,
+  ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),

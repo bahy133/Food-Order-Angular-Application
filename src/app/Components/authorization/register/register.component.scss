@@ -1,4 +1,259 @@
+
 .parent{
-  width: 100%;
+  width: 100% ;
   height: 850px;
+
+  form{
+    background-color: #1C2833;
+    width: 550px;
+    height: 550px;
+    box-shadow: 0px 0px 20px 7px #ffc300;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Cairo', sans-serif;
+    button{
+      background-color:  #ffc300;
+      border:#1C2833  2px solid;
+      color: #1C2833;
+      transition-duration: 0.5s;
+      &:hover{
+        background-color:  #1C2833;
+      border: #ffc300 2px solid;
+      color: #ffc300;
+      }
+      &:active{
+        background-color: white;
+        color: #1C2833;
+      }
+    }
+    .box{
+      position: relative;
+      margin: 10px;
+      width: 70%;
+      label{
+        position: absolute;
+        transition-duration: 1s;
+      }
+      input{
+        outline: none;
+        border-radius: 10px;
+        width: 100%;
+        border: #ffc300 2px solid;
+      }
+    }
+    .inputblockname{
+      label{
+        color: rgb(196, 192, 192);
+        right: 320px;
+      }
+      input{
+        background-color:#1C2833;
+        color:#ffc300;
+        &:focus+label{
+          background-color:#1C2833;
+          padding:0 10px 0 10px;
+          transform:translate(20px,-10px);
+          border-left:2px #ffc300 solid;
+          border-right: 2px #ffc300 solid;
+          font-size: xx-small;
+          color:#ffc300;
+        }
+        &:valid+label{
+          background-color:#1C2833;
+          padding:0 3px 0 3px;
+          transform:translate(20px,-10px);
+          border-left:2px #ffc300 solid;
+          border-right: 2px #ffc300 solid;
+          font-size: xx-small;
+          color:#ffc300;
+        }
+      }
+    }
+    .inputblockemail{
+      label{
+        color: rgb(196, 192, 192);
+        right: 340px;
+      }
+      input{
+        background-color:#1C2833;
+        color:#ffc300;
+        &:focus+label{
+          background-color:#1C2833;
+          padding:0 10px 0 10px;
+          transform:translate(20px,-10px);
+          border-left:2px #ffc300 solid;
+          border-right: 2px #ffc300 solid;
+          color:#ffc300;
+        }
+        &:valid+label{
+          background-color:#1C2833;
+          padding:0 3px 0 3px;
+          transform:translate(20px,-10px);
+          border-left:2px #ffc300 solid;
+          border-right: 2px #ffc300 solid;
+          color:#ffc300;
+        }
+      }
+    }
+    .inputblockpassword{
+      label{
+        color: rgb(196, 192, 192);
+        right: 320px;
+      }
+      input{
+        background-color:#1C2833;
+        color:#ffc300;
+        &:focus+label{
+          background-color:#1C2833;
+          padding:0 10px 0 10px;
+          transform:translate(25px,-10px);
+          border-left:2px #ffc300 solid;
+          border-right: 2px #ffc300 solid;
+          color:#ffc300;
+        }
+        &:valid+label{
+          background-color:#1C2833;
+          padding:0 3px 0 3px;
+          transform:translate(25px,-10px);
+          border-left:2px #ffc300 solid;
+          border-right: 2px #ffc300 solid;
+          color:#ffc300;
+        }
+      }
+    }
+    .inputblockphone{
+      label{
+        color: rgb(196, 192, 192);
+        right: 340px;
+      }
+      input{
+        background-color:#1C2833;
+        color:#ffc300;
+        &:focus+label{
+          background-color:#1C2833;
+          padding:0 10px 0 10px;
+          transform:translate(25px,-10px);
+          border-left:2px #ffc300 solid;
+          border-right: 2px #ffc300 solid;
+          color:#ffc300;
+        }
+        &:valid+label{
+          background-color:#1C2833;
+          padding:0 3px 0 3px;
+          transform:translate(25px,-10px);
+          border-left:2px #ffc300 solid;
+          border-right: 2px #ffc300 solid;
+          color:#ffc300;
+        }
+      }
+    }
+    .inputblockaddress{
+      label{
+        color: rgb(196, 192, 192);
+        right: 320px;
+      }
+      input{
+        background-color:#1C2833;
+        color:#ffc300;
+        &:focus+label{
+          background-color:#1C2833;
+          padding:0 10px 0 10px;
+          transform:translate(25px,-10px);
+          border-left:2px #ffc300 solid;
+          border-right: 2px #ffc300 solid;
+          color:#ffc300;
+        }
+        &:valid+label{
+          background-color:#1C2833;
+          padding:0 3px 0 3px;
+          transform:translate(25px,-10px);
+          border-left:2px #ffc300 solid;
+          border-right: 2px #ffc300 solid;
+          color:#ffc300;
+        }
+      }
+    }
+    .cardno{
+      label{
+        color: rgb(196, 192, 192);
+        right: 50px;
+      }
+      input{
+        background-color:#1C2833;
+        color:#ffc300;
+        &:focus+label{
+          background-color:#1C2833;
+          padding:0 3px 0 3px;
+          transform:translate(10px,-10px);
+          border-left:2px #ffc300 solid;
+          border-right: 2px #ffc300 solid;
+          color:#ffc300;
+        }
+        &:valid+label{
+          background-color:#1C2833;
+          padding:0 3px 0 3px;
+          transform:translate(10px,-10px);
+          border-left:2px #ffc300 solid;
+          border-right: 2px #ffc300 solid;
+          color:#ffc300;
+        }
+      }
+    }
+    .expiary{
+      label{
+        color: rgb(196, 192, 192);
+        right: 90px;
+      }
+      input{
+        background-color:#1C2833;
+        color:#ffc300;
+        &:focus+label{
+          background-color:#1C2833;
+          padding:0 3px 0 3px;
+          transform:translate(10px,-10px);
+          border-left:2px #ffc300 solid;
+          border-right: 2px #ffc300 solid;
+          color:#ffc300;
+        }
+        &:valid+label{
+          background-color:#1C2833;
+          padding:0 3px 0 3px;
+          transform:translate(10px,-10px);
+          border-left:2px #ffc300 solid;
+          border-right: 2px #ffc300 solid;
+          color:#ffc300;
+        }
+      }
+    }
+    .cvv{
+      label{
+        color: rgb(196, 192, 192);
+        right: 110px;
+      }
+      input{
+        background-color:#1C2833;
+        color:#ffc300;
+        &:focus+label{
+          background-color:#1C2833;
+          padding:0 3px 0 3px;
+          transform:translate(10px,-10px);
+          border-left:2px #ffc300 solid;
+          border-right: 2px #ffc300 solid;
+          color:#ffc300;
+        }
+        &:valid+label{
+          background-color:#1C2833;
+          padding:0 3px 0 3px;
+          transform:translate(10px,-10px);
+          border-left:2px #ffc300 solid;
+          border-right: 2px #ffc300 solid;
+          color:#ffc300;
+        }
+      }
+    }
+
+  }
 }

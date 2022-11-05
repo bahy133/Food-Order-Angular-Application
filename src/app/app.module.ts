@@ -20,6 +20,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CustomdirDirective } from './Directives/customdir.directive';
 import { MatListModule } from '@angular/material/list';
 import { LogindirDirective } from './Directives/logindir.directive';
+import { LangdirRegDirective } from './Directives/langdir-reg.directive';
 
 @NgModule({
   declarations: [

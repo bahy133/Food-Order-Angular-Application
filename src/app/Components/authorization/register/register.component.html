@@ -1,1 +1,160 @@
-<div class="parent container-fluid"></div>
+<div class="parent container-fluid">
+  <form [formGroup]="userReg">
+    <div class="inputblockname box">
+      <input
+        type="text"
+        required="required"
+        id="uName"
+        name="userName"
+        formControlName="name"
+      />
+      <label
+        for="uName"
+        appLangdirReg
+        [dir]="lang.changedir()"
+        namedir="name"
+        >{{ "NAME" | translate }}</label
+      >
+    </div>
+    <div class="inputblockemail box">
+      <input
+        type="email"
+        required="required"
+        id="uEmail"
+        name="userEmail"
+        formControlName="email"
+      />
+      <label
+        for="uEmail"
+        appLangdirReg
+        [dir]="lang.changedir()"
+        namedir="email"
+        >{{ "EMAIL" | translate }}</label
+      >
+    </div>
+    <div class="inputblockpassword box">
+      <input
+        type="password"
+        required="required"
+        id="uPass"
+        name="userPass"
+        formControlName="password"
+      />
+      <label
+        for="uPass"
+        appLangdirReg
+        [dir]="lang.changedir()"
+        namedir="password"
+        >{{ "PASSWORD" | translate }}</label
+      >
+    </div>
+    <div class="inputblockphone box">
+      <input
+        type="text"
+        required="required"
+        id="uPhone"
+        name="userPhone"
+        formControlName="phone"
+      />
+      <label
+        for="uPhone"
+        appLangdirReg
+        [dir]="lang.changedir()"
+        namedir="phone"
+        >{{ "PHONE" | translate }}</label
+      >
+    </div>
+    <div class="inputblockaddress box">
+      <input
+        type="text"
+        required="required"
+        id="uAddress"
+        name="userAddress"
+        formControlName="address"
+      />
+      <label
+        for="uAddress"
+        appLangdirReg
+        [dir]="lang.changedir()"
+        namedir="address"
+        >{{ "ADDRESS" | translate }}</label
+      >
+    </div>
+    <div class="radiobuttons">
+      <div class="form-check form-check-inline">
+        <input
+          class="form-check-input"
+          type="radio"
+          id="uMale"
+          name="gender"
+          formControlName="gender"
+          value="M"
+        />
+        <label class="form-check-label" for="uMale" style="color: #ffc300">{{
+          "MALE" | translate
+        }}</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input
+          class="form-check-input"
+          type="radio"
+          id="uFemale"
+          name="gender"
+          formControlName="gender"
+          value="F"
+        />
+        <label class="form-check-label" for="uFemale" style="color: #ffc300">{{
+          "FEMALE" | translate
+        }}</label>
+      </div>
+    </div>
+    <div class="inputblockcard" formGroupName="cardData">
+      <div class="cardno box">
+        <input
+          type="text"
+          required="required"
+          id="uCno"
+          name="userCno"
+          formControlName="cardnumber"
+        />
+        <label
+          for="uCno"
+          appLangdirReg
+          [dir]="lang.changedir()"
+          namedir="Cno"
+          >{{ "CARDNUMBER" | translate }}</label
+        >
+      </div>
+      <div class="expiary box">
+        <input
+          type="text"
+          required="required"
+          id="uEx"
+          formControlName="cardexpiary"
+        />
+        <label for="uEx" appLangdirReg [dir]="lang.changedir()" namedir="Cex">{{
+          "EXPIARY" | translate
+        }}</label>
+      </div>
+      <div class="cvv box">
+        <input
+          type="text"
+          required="required"
+          id="uCvv"
+          name="userCvv"
+          formControlName="cvv"
+        />
+        <label
+          for="uCvv"
+          appLangdirReg
+          [dir]="lang.changedir()"
+          namedir="cvv"
+          >{{ "CVV" | translate }}</label
+        >
+      </div>
+    </div>
+    <button type="submit" class="btn" [disabled]="userReg.invalid">
+      {{ "REGISTER" | translate }}
+    </button>
+  </form>
+</div>
