@@ -19,7 +19,9 @@
   list-style-type: none;
   align-items: center;
   justify-content: center;
-  border: 3px #1C2833 solid;
+  // border: 3px #1C2833 solid;
+  box-shadow: #ffc300 1px -14px 20px 20px;
+
 
   li{
     font-family: 'Oswald', sans-serif;
@@ -53,7 +55,7 @@
         position: absolute;
         top: -9px;
         left: 25px;
-
+        transition-duration:2s ;
         font-size: x-small;
         // z-index: 5;
         border: 1px solid black;

@@ -19,23 +19,23 @@ export class UserService {
     return this.http.get<User[]>(`${environment.ApiLink}/User`);
   }
   getUser(Uemail: string): Observable<User> {
-    return this.http.get<User>(`${environment.ApiLink}/User?email=${Uemail}`);
+    return this.http.get<User>(`${environment.ApiLink}/User/${Uemail}`);
   }
   addUsers(Users: User) {
     return this.http.post(
       `${environment.ApiLink}/User`,
-      Users,
+      JSON.stringify(Users),
       this.httpOptions
     );
   }
   updateUser(uEmail: string, user: User) {
     return this.http.put(
-      `${environment.ApiLink}/User?email=${uEmail}`,
-      user,
+      `${environment.ApiLink}/User/${uEmail}`,
+      JSON.stringify(user),
       this.httpOptions
     );
   }
   deleteUser(uEmail: string) {
-    return this.http.delete(`${environment.ApiLink}/User?email=${uEmail}`);
+    return this.http.delete(`${environment.ApiLink}/User/${uEmail}`);
   }
 }

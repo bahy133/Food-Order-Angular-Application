@@ -1,7 +1,7 @@
 import { Food } from './food';
 export class User {
   name!: string;
-  email!: string;
+  id!: string;
   password!: string;
   phone!: string;
   address!: string;

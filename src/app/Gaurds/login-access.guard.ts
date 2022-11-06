@@ -12,7 +12,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class LoginAccessGuard implements CanActivate {
-  authser!: AuthService;
+  constructor(private auth: AuthService) {}
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
@@ -21,6 +21,6 @@ export class LoginAccessGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    return this.authser.isLoggedIn;
+    return this.auth.isLoggedIn;
   }
 }

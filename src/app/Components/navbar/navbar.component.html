@@ -6,8 +6,13 @@
     <li routerLink="/Home">{{ "HOME" | translate }}</li>
     <li routerLink="/Food/Stores">{{ "STORES" | translate }}</li>
     <li (click)="NavigateToAccount()">{{ "ACCOUNT" | translate }}</li>
-    <li routerLink="/Authorization/Login">{{ "LOGIN" | translate }}</li>
-    <li routerLink="/User/Cart" class="cart">
+    <li routerLink="/Authorization/Login" *ngIf="!auth.isLoggedIn">
+      {{ "LOGIN" | translate }}
+    </li>
+    <li *ngIf="auth.isLoggedIn" (click)="auth.Logout()">
+      {{ "LOGOUT" | translate }}
+    </li>
+    <li (click)="NavigateCart()" class="cart">
       <button type="button">
         <i class="fa-solid fa-cart-plus"></i><span class="cartno">0</span>
       </button>

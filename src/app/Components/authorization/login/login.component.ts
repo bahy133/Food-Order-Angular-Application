@@ -33,21 +33,24 @@ export class LoginComponent implements OnInit {
   get pass() {
     return this.userLogin.get('password');
   }
-  Loginfn() {
-    console.log('in login');
-    this.userser.getUser(this.email?.value).subscribe((data) => {
-      this.userdata = data;
-    });
+  async Loginfn() {
+    this.userdata = (await this.userser
+      .getUser(this.email?.value)
+      .toPromise())!;
+
     if (this.userdata) {
       if (this.pass?.value == this.userdata.password) {
-        localStorage.setItem('token', this.userdata.email);
+        localStorage.setItem('token', this.userdata.id);
         this.router.navigate(['/Home']);
         this.error = false;
       } else {
+        console.log('pass');
         this.error = true;
       }
+    } else {
+      console.log('email');
+      this.error = true;
     }
-    this.error = true;
   }
   ngOnInit(): void {}
 }

@@ -1,3 +1,6 @@
+import { User } from './../../Models/user';
+import { UserService } from './../../Services/user.service';
+import { AuthService } from './../../Services/auth.service';
 import { trigger_Example } from './../../Animations/Fade.Animations';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -11,9 +14,14 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class NavbarComponent implements OnInit {
   currentlang!: string;
-  UEmail: string = 'g';
-
-  constructor(public translate: TranslateService, private router: Router) {}
+  // UEmail: string = 'g';
+  user!: User;
+  constructor(
+    public translate: TranslateService,
+    private router: Router,
+    public auth: AuthService,
+    private userser: UserService
+  ) {}
 
   ngOnInit(): void {}
   transfn(lang: string) {
@@ -28,6 +36,26 @@ export class NavbarComponent implements OnInit {
     return 'ltr';
   }
   NavigateToAccount() {
-    this.router.navigate(['User/Account/', this.UEmail]);
+    this.router.navigate(['User/Account/', localStorage.getItem('token')]);
   }
+  NavigateCart() {
+    this.router.navigate(['User/Cart/', localStorage.getItem('token')]);
+  }
+  checkLogin(): boolean {
+    if (localStorage.getItem('token')) {
+      return false;
+    }
+    return true;
+  }
+  // checkCartCount(): number {
+  //   if (localStorage.getItem('token')) {
+  //     this.userser.getUser(localStorage.getItem('token')!).subscribe((data) => {
+  //       this.user = data;
+  //     });
+  //   }
+  //   if (this.user) {
+  //     return this.user.cart.length;
+  //   }
+  //   return 0;
+  // }
 }

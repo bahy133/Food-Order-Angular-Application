@@ -30,7 +30,8 @@
   "ADDCOMMENT":"Comment",
   "ADDCART":"Add To Cart",
   "CREATEACCOUNT":"Create Account",
-  "INVALIDLOGIN":"Invalid email or password"
+  "INVALIDLOGIN":"Invalid email or password",
+  "UPDATE":"Update"
 
 
 

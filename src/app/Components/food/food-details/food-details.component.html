@@ -26,13 +26,9 @@
       </mat-list-item>
     </mat-list>
     <div class="inputbox">
-      <input type="text" #Ucomment />
+      <input type="text" [(ngModel)]="comment" />
       <label>{{ "COMMENT" | translate }}</label>
-      <button
-        type="button"
-        class="btn btn-primary"
-        (click)="addComment(Ucomment.value)"
-      >
+      <button type="button" class="btn btn-primary" (click)="addComment()">
         {{ "ADDCOMMENT" | translate }}
       </button>
     </div>

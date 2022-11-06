@@ -1,5 +1,6 @@
 <div class="parent container-fluid">
-  <form [formGroup]="userReg">
+  <form [formGroup]="userReg" (ngSubmit)="Register()">
+    <div *ngIf="error" class="text-danger">Invalid email already exist</div>
     <div class="inputblockname box">
       <input
         type="text"
@@ -22,7 +23,7 @@
         required="required"
         id="uEmail"
         name="userEmail"
-        formControlName="email"
+        formControlName="id"
       />
       <label
         for="uEmail"

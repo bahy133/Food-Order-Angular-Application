@@ -24,14 +24,14 @@ export class FoodService {
   addFood(food: Food) {
     return this.http.post(
       `${environment.ApiLink}/Food`,
-      food,
+      JSON.stringify(food),
       this.httpOptions
     );
   }
   updateFood(Fname: string, food: Food) {
     return this.http.put(
       `${environment.ApiLink}/Food/${Fname}`,
-      food,
+      JSON.stringify(food),
       this.httpOptions
     );
   }

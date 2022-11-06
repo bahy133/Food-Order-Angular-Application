@@ -11,7 +11,7 @@
     position: relative;
     left: -240px;
     top: 2px;
-
+    transition-duration: 1s;
   }
   .content{
     display: flex;
@@ -81,10 +81,14 @@
       height: 30px;
       border-radius: 20px;
       outline: none;
-      padding-left:29px ;
+      //padding-left:29px ;
       border: #FFC300 2px solid;
+
       &:hover{
         border-color: #C70039;
+      }
+      &:focus+ .serachicon{
+        display: none;
       }
     }
     button{

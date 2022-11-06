@@ -24,14 +24,14 @@ export class StoresService {
   addStores(stores: Stores) {
     return this.http.post(
       `${environment.ApiLink}/Stores`,
-      stores,
+      JSON.stringify(stores),
       this.httpOptions
     );
   }
   updateStore(storeName: string, store: Stores) {
     return this.http.put(
       `${environment.ApiLink}/Stores/${storeName}`,
-      store,
+      JSON.stringify(store),
       this.httpOptions
     );
   }

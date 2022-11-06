@@ -1,3 +1,4 @@
+import { SharedModule } from './../../Modules/shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
@@ -16,14 +17,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [
-    LoginComponent,
-    RegisterComponent,
-    LogindirDirective,
-    LangdirRegDirective,
-  ],
+  declarations: [LoginComponent, RegisterComponent, LogindirDirective],
   imports: [
     CommonModule,
+    SharedModule,
     RouterModule.forChild(routes),
     TranslateModule.forChild({
       loader: {
