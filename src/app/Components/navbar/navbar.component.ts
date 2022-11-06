@@ -14,6 +14,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class NavbarComponent implements OnInit {
   currentlang!: string;
+  cartnumber!: number;
   // UEmail: string = 'g';
   user!: User;
   constructor(
@@ -23,7 +24,9 @@ export class NavbarComponent implements OnInit {
     private userser: UserService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.checkCartCount();
+  }
   transfn(lang: string) {
     this.translate.use(lang);
     localStorage.setItem('language', lang);
@@ -47,15 +50,12 @@ export class NavbarComponent implements OnInit {
     }
     return true;
   }
-  // checkCartCount(): number {
-  //   if (localStorage.getItem('token')) {
-  //     this.userser.getUser(localStorage.getItem('token')!).subscribe((data) => {
-  //       this.user = data;
-  //     });
-  //   }
-  //   if (this.user) {
-  //     return this.user.cart.length;
-  //   }
-  //   return 0;
-  // }
+  checkCartCount() {
+    if (localStorage.getItem('token')) {
+      this.userser.getUser(localStorage.getItem('token')!).subscribe((data) => {
+        this.user = data;
+        this.cartnumber = this.user.cart.length;
+      });
+    }
+  }
 }

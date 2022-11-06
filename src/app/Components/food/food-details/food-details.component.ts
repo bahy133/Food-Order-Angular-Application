@@ -49,6 +49,7 @@ export class FoodDetailsComponent implements OnInit {
       this.userser
         .updateUser(localStorage.getItem('token')!, this.user)
         .subscribe();
+      location.reload();
     } else {
       this.router.navigate(['/Authorization/Login']);
     }
