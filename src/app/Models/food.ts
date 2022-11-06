@@ -7,4 +7,5 @@ export class Food {
   imgURL!: string;
   description!: string;
   comments!: string[];
+  quantity!: number;
 }

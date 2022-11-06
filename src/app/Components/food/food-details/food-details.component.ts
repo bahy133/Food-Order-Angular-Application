@@ -44,7 +44,18 @@ export class FoodDetailsComponent implements OnInit {
       this.user = (await this.userser
         .getUser(localStorage.getItem('token')!)
         .toPromise())!;
+      if (
+        this.user.cart.filter((data) => data.id == this.food.id).length >= 1
+      ) {
+        this.user.cart.filter(
+          (data) => data.id == this.food.id
+        )[0].quantity += 1;
 
+        this.userser
+          .updateUser(localStorage.getItem('token')!, this.user)
+          .subscribe();
+        return;
+      }
       this.user.cart.push(this.food);
       this.userser
         .updateUser(localStorage.getItem('token')!, this.user)

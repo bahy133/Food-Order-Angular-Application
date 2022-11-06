@@ -1,0 +1,22 @@
+.parent{
+  font-family: 'Cairo', sans-serif;
+  font-size: x-large;
+  height: 550px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  button{
+    background-color: #ffc300;
+    color: #1C2833;
+    border: 2px solid #1C2833;
+    margin-top: 10px;
+    transition-duration: .5s;
+    &:hover{
+      background-color:  #1C2833;
+      color: #ffc300;
+      border: 2px solid #ffc300;
+    }
+  }
+}

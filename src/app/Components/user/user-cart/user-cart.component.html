@@ -1,1 +1,46 @@
-<p>user-cart works!</p>
+<div class="parent container-fluid" *ngIf="user.cart.length">
+  <table class="table">
+    <tbody>
+      <tr *ngFor="let item of user.cart; let i = index">
+        <td>
+          <img
+            [src]="item.imgURL"
+            width="150px"
+            height="150px"
+            style="border-radius: 50%"
+          />
+        </td>
+        <td>{{ item.id.toUpperCase() | translate }}</td>
+        <td>
+          <button
+            type="button"
+            class="btn"
+            style="color: black; background-color: red; border-radius: 50%"
+            (click)="minus(i)"
+          >
+            -
+          </button>
+        </td>
+        <td>{{ item.quantity }}</td>
+        <td>
+          <button
+            type="button"
+            class="btn"
+            style="
+              color: black;
+              background-color: darkgreen;
+              border-radius: 50%;
+            "
+            (click)="plus(i)"
+          >
+            +
+          </button>
+        </td>
+        <td>{{ item.price }} {{ "EGP" | translate }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>Total: {{ total }} {{ "EGP" | translate }}</div>
+  <button type="button" class="btn">{{ "CHECKOUT" | translate }}</button>
+</div>
+<div *ngIf="!user.cart.length" class="parent">No items to show</div>
