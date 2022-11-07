@@ -67,8 +67,21 @@ export class FoodDetailsComponent implements OnInit {
   }
   addrate() {
     if (this.authSer.isLoggedIn) {
+      let idx = this.Rate.foodnames.indexOf(this.food.id);
+
+      if (idx >= 0) {
+        let rest: number = this.Rate.foodrates[idx];
+        this.food.rating -= rest;
+        this.Rate.foodrates[idx] = +this.userrate;
+      } else {
+        this.Rate.foodnames.push(this.food.id);
+        this.Rate.foodrates.push(+this.userrate);
+      }
       this.food.rating += +this.userrate;
       this.foodser.updateFood(this.food.id, this.food).subscribe();
+      this.rateser
+        .updateRate(localStorage.getItem('token')!, this.Rate)
+        .subscribe();
     } else {
       this.router.navigate(['/Authorization/Login']);
     }
