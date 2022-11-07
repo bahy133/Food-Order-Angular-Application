@@ -32,7 +32,13 @@
   "CREATEACCOUNT":"Create Account",
   "INVALIDLOGIN":"Invalid email or password",
   "UPDATE":"Update",
-  "CHECKOUT":"Checkout"
+  "CHECKOUT":"Checkout",
+  "FNAMEINEN":"Food Name in English",
+  "FNAMEINAR":"Food Name in Arabic",
+  "PRICE":"Price",
+  "IMAGE":"Image",
+  "DESCRIPTION":"Description",
+  "ADDFOOD":"Add Food"
 
 
 

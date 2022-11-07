@@ -1,1 +1,75 @@
-<p>admin works!</p>
+<div class="parent container-fluid">
+  <form [formGroup]="foodForm" (ngSubmit)="Submit()">
+    <div class="form-group">
+      <label for="FnameE">{{ "FNAMEINEN" | translate }}</label>
+      <input
+        type="text"
+        class="form-control"
+        id="FnameE"
+        name="foodnameEnglish"
+        formControlName="id"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="FnameA">{{ "FNAMEINAR" | translate }}</label>
+      <input
+        type="text"
+        class="form-control"
+        id="FnameA"
+        name="foodnameArabic"
+        formControlName="fnameInAr"
+        pattern="^[\u0621-\u064A0-9 ]+$"
+      />
+    </div>
+    <div class="form-group">
+      <label for="fPrice">{{ "PRICE" | translate }}</label>
+      <input
+        type="text"
+        class="form-control"
+        id="fPrice"
+        name="foodPrice"
+        formControlName="price"
+      />
+    </div>
+    <div class="form-group">
+      <label for="fStore">{{ "STORES" | translate }}</label>
+      <input
+        type="text"
+        class="form-control"
+        id="fStore"
+        name="foodStore"
+        formControlName="store"
+      />
+    </div>
+    <div class="form-group">
+      <label for="fImg">{{ "IMAGE" | translate }}</label>
+      <input
+        type="file"
+        class="form-control"
+        id="fImg"
+        name="foodImg"
+        formControlName="imgURL"
+        accept="image/png, image/gif, image/jpeg"
+      />
+    </div>
+    <div class="form-group">
+      <label for="fDesc">{{ "DESCRIPTION" | translate }}</label>
+      <textarea
+        class="form-control"
+        id="fDesc"
+        name="foodDesc"
+        cols="5"
+        rows="7"
+        formControlName="description"
+      ></textarea>
+    </div>
+    <button
+      type="submit"
+      class="btn btn-primary m-2"
+      [disabled]="foodForm.invalid"
+    >
+      {{ "ADDFOOD" | translate }}
+    </button>
+  </form>
+</div>

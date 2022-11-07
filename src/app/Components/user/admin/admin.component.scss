@@ -1,0 +1,17 @@
+.parent{
+  width: 100%;
+  height: 850px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Cairo', sans-serif;
+  font-size: larger;
+  div{
+    margin: 10px;
+    input, textarea{
+      transition-duration: 1s;
+      margin-top: 5px;
+    }
+  }
+}

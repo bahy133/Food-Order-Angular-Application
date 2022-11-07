@@ -78,6 +78,7 @@ export class FoodDetailsComponent implements OnInit {
         this.Rate.foodrates.push(+this.userrate);
       }
       this.food.rating += +this.userrate;
+      this.food.numUser += 1;
       this.foodser.updateFood(this.food.id, this.food).subscribe();
       this.rateser
         .updateRate(localStorage.getItem('token')!, this.Rate)
